@@ -17,35 +17,21 @@
 
   <section id="donate-message">
     <h2>
-      <span id="donate-headline-first-run" data-i18n-content="donate_thanks">Thanks for installing Clear Cache &mdash; <br></span>
+      <span id="donate-headline-first-run" data-i18n-content="donate_thanks">Thanks for installing Clear Cache &mdash;
+        <br></span>
       <span id="donate-headline">A Note on Privacy</span>
     </h2>
-    <p>Hi!</p>
-    <p>Ever since Clear Cache launched, I've been getting requests to sell or monetize it with ads. It has become a
-      <a href="http://arstechnica.com/security/2014/01/malware-vendors-buy-chrome-extensions-to-send-adware-filled-updates/"
-         target="_blank">common scheme by scammers</a>
-      to buy popular Chrome extensions and silently inject malware and hidden links.
-    </p>
-    <p>
-      This extension is a personal project of mine and I built it to be a helpful tool; not a profitable product. It's
-      important to me that Clear Cache
-      <em>remains free</em>, <em>never collects sensitive data
-    </em> and <em>never injects third-party ads or content</em>.
-    </p>
-    <p>
-      If you enjoy Clear Cache and would like to support independent development, please consider a small donation.
-    </p>
-    <p>Thank you for choosing Clear Cache,<br/>&mdash; Ben</p>
+
     <p class="center-align">
       Sponsor
       <a class="donate-button light" data-ga-event="donation,donate-button-clicked,one-coffee" target="_blank"
-         href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=RTXV4JQ2ZGKGW&amp;lc=US&amp;item_name=Buy%20Benjamin%20Bojko%20a%20coffee%20for%20Clear%20Cache&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted&amp;amount=2">1
+         href="">1
         Coffee</a>
       <a class="donate-button" data-ga-event="donation,donate-button-clicked,two-coffees" target="_blank"
-         href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=RTXV4JQ2ZGKGW&amp;lc=US&amp;item_name=Buy%20Benjamin%20Bojko%20two%20coffees%20for%20Clear%20Cache&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted&amp;amount=4">2
+         href="">2
         Coffees</a>
       <a class="donate-button light" data-ga-event="donation,donate-button-clicked,custom" target="_blank"
-         href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=RTXV4JQ2ZGKGW&amp;lc=US&amp;item_name=Buy%20Benjamin%20Bojko%20something%20nice%20for%20Clear%20Cache&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
+         href=""
          title="Cat poop coffee is expensive...">You Choose</a>
     </p>
     <p>
@@ -54,16 +40,17 @@
     </p>
   </section>
 
-  <section>
+  <section id="auto-setting">
     <h2 data-i18n-content="autoSetting">auto-Running</h2>
     <ul>
       <li>
         <input type="checkbox" name="autorefresh" id="autorefresh"/>
-        <label for="autorefresh" data-i18n-content="reload_principle">Automatically reload active tab after clearing data</label>
+        <label for="autorefresh" data-i18n-content="reload_principle">Automatically reload active tab after clearing
+          data</label>
       </li>
     </ul>
-    <h3 style="text-align: start" data-i18n-content="auto_clean">auto-Clean</h3>
-    <ul>
+    <h3 style="text-align: start; display: none" data-i18n-content="auto_clean">auto-Clean</h3>
+    <ul style="display: none">
       <li class="option-item">
         <input type="checkbox" name="time-to-clear" value="onCloseWindow" id="onclosewindow"/>
         <label for="onclosewindow">关闭窗口时</label>
@@ -83,7 +70,7 @@
     </ul>
   </section>
 
-  <section>
+  <section id="context-menu-setting">
     <h2 data-i18n-content="shortcut_contextMenu">Keyboard Shortcut and contextMenu</h2>
     <p>
       <span data-i18n-content="">
@@ -110,8 +97,9 @@
     </p>
   </section>
 
-  <section id="timePerid">
-    <h2 style="display: inline-block;margin-right: 20px;" data-i18n-content="time_period">Time Period</h2><span class="tip">将清理以下时间范围内的缓存</span>
+  <section id="timePerid-setting">
+    <h2 style="display: inline-block;margin-right: 20px;" data-i18n-content="time_period">Time Period</h2><span
+      class="tip">将清理以下时间范围内的缓存</span>
     <ul>
       <!-- Extension now API expects miliseconds as values -->
       <li class="option-item"><input type="radio" name="timeperiod" value="last_hour" id="last_hour"/><label
@@ -127,12 +115,13 @@
     </ul>
   </section>
 
-  <section id="data-to-remove">
+  <section id="data-to-remove-setting">
     <h2 data-i18n-content="dataToRemove">Data to Remove</h2>
     <h3><a class="toggle-setting" href="#common-cache" data-for="common-use-cache">常用缓存设置</a></h3>
     <ul id="common-cache">
       <li class="option-item">
-        <input type="checkbox" name="data_to_remove" value="cache" id="cache"/><label for="cache" data-i18n-content="cache">Cache</label>
+        <input type="checkbox" name="data_to_remove" value="cache" id="cache"/><label for="cache"
+                                                                                      data-i18n-content="cache">Cache</label>
         <aside class="more-info">
           <blockquote cite="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1">
             <span data-i18n-content="cache_info">
@@ -140,7 +129,8 @@
                webpages to speed up the loading of the webpage during your next visit.
             </span>
             &mdash;
-            <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1" target="_blank">
+            <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1"
+               target="_blank">
               Source
             </a>
           </blockquote>
@@ -153,9 +143,11 @@
         <button class="refreshOne" value="cookies">清理</button>
         <aside id="cookie-filters" class="more-options">
           <p><input type="radio" name="cookies_filter_inclusive" value="yes" id="cookies_filter_inclusive_yes"/>
-            <label for="cookies_filter_inclusive_yes" data-i18n-content="only_clear_follow">Only clear the following </label><em data-i18n-content="fast">fast</em>
+            <label for="cookies_filter_inclusive_yes" data-i18n-content="only_clear_follow">Only clear the
+              following </label><em data-i18n-content="fast">fast</em>
             <input type="radio" name="cookies_filter_inclusive" value="no" id="cookies_filter_inclusive_no"/>
-            <label for="cookies_filter_inclusive_no" data-i18n-content="donot_clear_follow">Don't clear the following </label><em data-i18n-content="slow">slow</em>
+            <label for="cookies_filter_inclusive_no" data-i18n-content="donot_clear_follow">Don't clear the
+              following </label><em data-i18n-content="slow">slow</em>
           </p>
           <ol></ol>
           <legend data-i18n-content="no_filters_defined">No filters defined</legend>
@@ -167,9 +159,9 @@
               Files stored on your computer by websites you've visited. These files contain user information, such as
               preferences for websites or profile information.
             </span>
-             &mdash;
+            &mdash;
             <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1"
-              target="_blank">Source</a>
+               target="_blank">Source</a>
           </blockquote>
         </aside>
       </li>
@@ -184,7 +176,8 @@
               page, Any IP addresses pre-fetched from those pages.
             </span>
             &mdash;
-            <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1" target="_blank">
+            <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1"
+               target="_blank">
               Source
             </a>
           </blockquote>
@@ -202,7 +195,7 @@
             </span>
             &mdash;
             <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1"
-                target="_blank">Source</a>
+               target="_blank">Source</a>
           </blockquote>
         </aside>
         <button class="refreshOne" value="downloads">清理</button>
@@ -216,7 +209,8 @@
                All your Autofill entries and records of text you've entered on web forms are deleted.
             </span>
             &mdash;
-            <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1" target="_blank">
+            <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1"
+               target="_blank">
               Source
             </a>
           </blockquote>
@@ -233,7 +227,8 @@
               from Keychain Access.
             </span>
             &mdash;
-            <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1" target="_blank">
+            <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1"
+               target="_blank">
               Source
             </a>
           </blockquote>
@@ -252,7 +247,7 @@
               IndexedDB is an API for client-side storage of significant amounts of structured data, which also enables high performance searches
               of this data using indexes.
             </span>
-             &mdash;
+            &mdash;
             <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API" target="_blank">
               Source
             </a>
@@ -269,7 +264,7 @@
               DOM Storage [which includes Local Storage] is designed to provide a larger, more secure, and easier-to-use alternative to
               storing information in cookies.
             </span>
-             &mdash;
+            &mdash;
             <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage" target="_blank">
               Source
             </a>
@@ -301,7 +296,7 @@
         <label for="appcache" data-i18n-content="appCache">App Cache</label>
         <aside class="more-info">
           <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache">
-            <span  data-i18n-content="appCache_info">
+            <span data-i18n-content="appCache_info">
               HTML5 provides an application caching mechanism that lets web-based applications run offline. Developers can
             use the Application Cache (AppCache) interface to specify resources that the browser should cache and make
             available to offline users. Applications that are cached load and work correctly even if users click the
@@ -324,9 +319,10 @@
                Any client-side data stored by plug-ins that use the NPAPI ClearSiteData API.
             </span>
             &mdash;
-            <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1" target="_blank">
-            Source
-          </a>
+            <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1"
+               target="_blank">
+              Source
+            </a>
           </blockquote>
         </aside>
         <button class="refreshOne" value="pluginData">清理</button>
@@ -343,7 +339,7 @@
               not move forward to become a W3C Recommendation. One potential alternative storage standard is
               IndexedDB.
             </span>
-             &mdash;
+            &mdash;
             <a href="http://en.wikipedia.org/wiki/Web_SQL_Database" target="_blank">
               Source
             </a>
@@ -354,33 +350,14 @@
     </ul>
   </section>
 
-  <section id="donate-message-short">
-    <p class="center-align">
-      Support Clear Cache by sponsoring
-      <a data-ga-event="donation,short-donate-button-clicked,one-coffee" target="_blank"
-         href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=RTXV4JQ2ZGKGW&amp;lc=US&amp;item_name=Buy%20Benjamin%20Bojko%20a%20coffee%20for%20Clear%20Cache&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted&amp;amount=2">
-        1 coffee
-      </a>,
-      <a data-ga-event="donation,short-donate-button-clicked,two-coffees" target="_blank"
-                       href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=RTXV4JQ2ZGKGW&amp;lc=US&amp;item_name=Buy%20Benjamin%20Bojko%20a%20coffee%20for%20Clear%20Cache&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted&amp;amount=4">
-        2 coffees
-      </a>
-        or
-      <a data-ga-event="donation,short-donate-button-clicked,custom" target="_blank"
-                          href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=RTXV4JQ2ZGKGW&amp;lc=US&amp;item_name=Buy%20Benjamin%20Bojko%20a%20coffee&amp;%20for%20Clear%20Cachecurrency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted">
-        something else
-      </a>.
-    </p>
-  </section>
-
-  <section>
+  <section id="question-support">
     <h2 data-i18n-content="question_support">Questions and Support</h2>
     <p>
       <span data-i18n-content="question_trouble">
         Having trouble using Clear Cache? Want to ask a question or request a feature? Send me a note in the
       </span>
       <a href="https://github.com/rowthan/clearCache"
-        target="_blank">
+         target="_blank">
       <span data-i18n-content="support_section">
         support section
       </span>
@@ -390,8 +367,8 @@
 
   <section id="version">
     <h2 data-i18n-content="changelog">更新日志</h2>
-    
-    <h4 >Version 0.0.1 2017/05/12</h4>
+
+    <h4>Version 0.0.1 2017/05/12</h4>
     <ul class="bullet-list">
       <li>支持刷新各类缓存</li>
       <li>快捷键设置</li>
@@ -402,7 +379,7 @@
     <hr>
   </section>
 
-  <section>
+  <section id="author">
     <p>
       <span data-i18n-content="extension_by">
         开发者
@@ -410,6 +387,10 @@
       <a href="http://github.com/rowthan" target="_blank">rowthan</a>
     </p>
   </section>
+
+  <!--<aside id="custom-appearance">
+      <h3>样式定义</h3>
+  </aside>-->
 </div>
 
 <script type="text/javascript" src="js/jquery.min.js"></script>

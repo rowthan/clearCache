@@ -6,4 +6,6 @@
   localStorage['num_times_options_viewed'] = parseInt(localStorage['num_times_options_viewed']) || 0;
   localStorage['contextMenuSwitch'] = localStorage['contextMenuSwitch'] || true;
   localStorage['clearTimes'] = localStorage['clearTimes'] || 0 ;
+  localStorage['autorefresh'] = localStorage['autorefresh'] || true;
+  localStorage['custom_style'] = localStorage['custom_style'] || JSON.stringify({"backgroundColor":"#c8f28b"});
 })();

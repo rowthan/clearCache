@@ -1,15 +1,5 @@
 (function() {
   $(document).ready(function() {
-
-    /**
-     * Reset values for testing
-     */
-    // localStorage['hide_donate_message'] = false;
-    // localStorage['num_times_options_viewed'] = 0;
-
-    /**
-     * Default values set in load-default-options.js
-     */
     var timeperiod = localStorage['timeperiod'];
     var dataToRemove = JSON.parse(localStorage['data_to_remove']);
     var cookieSettings = JSON.parse(localStorage['cookie_settings']);
@@ -31,17 +21,6 @@
       delete dataToRemove['originBoundCertificates'];
       saveSettings();
     }
-
-    /**
-     * Generic event tracking
-     */
-    $("[data-ga-event]").click(function(event) {
-      var $target = $(event.target);
-      var info = ($target.data('ga-event') || '').split(',');
-      var category = info && info.length >= 1 ? info[0] : '';
-      var action = info && info.length >= 2 ? info[1] : '';
-      var label = info && info.length >= 3 ? info[2] : null;
-    });
 
     /**
      * Support for opening the extensions overview page
@@ -97,7 +76,7 @@
         saveSettings();
       });
 
-    /**是否添加菜单键**/
+    /**contextMenu add**/
     $("input[name='contextMenuSwitch']").each(function () {
         var element = $(this);
         var switchValue = element.attr("value");
@@ -109,13 +88,9 @@
         })
     });
 
-
-    /*=======================================================
-     * Cookie Settings
-     *=======================================================/
-    /**
-     * Load sub-options instead of deeplinking
-     */
+      /***
+       * cookie
+       */
     $("a[href*='#cookie-filters'").click(function(event) {
       event.preventDefault();
       var listItem = $(this).closest("li");
@@ -245,12 +220,8 @@
     });
 
 
-    /*=======================================================
-     * Initialize
-     *=======================================================/
-
     /**
-     * Init
+     * init
      */
     timeperiod = timeperiod || timeperiods[0];
     $("input[value='" + timeperiod + "']").prop('checked', true);
@@ -264,16 +235,6 @@
     } else {
       $("#cookies_filter_inclusive_no").prop('checked', true);
     }
-
-    // if (!shouldHideDonateMessage) {
-    //   $("#donate-message").show();
-    // } else {
-    //   $("#donate-message-short").show();
-    // }
-
-    // if (isFirstRun) {
-    //   $("#donate-headline-first-run").show();
-    // }
 
     /**
      * Helpers
@@ -300,11 +261,18 @@
       var regex = /^(?:([a-z0-9+.-]+:\/\/)((?:(?:[a-z0-9-._~!$&'()*+,;=:]|%[0-9A-F]{2})*)@)?((?:[a-z0-9-._~!$&'()*+,;=]|%[0-9A-F]{2})*)(:(?:\d*))?(\/(?:[a-z0-9-._~!$&'()*+,;=:@\/]|%[0-9A-F]{2})*)?|([a-z0-9+.-]+:)(\/?(?:[a-z0-9-._~!$&'()*+,;=:@]|%[0-9A-F]{2})+(?:[a-z0-9-._~!$&'()*+,;=:@\/]|%[0-9A-F]{2})*)?)(\?(?:[a-z0-9-._~!$&'()*+,;=:\/?@]|%[0-9A-F]{2})*)?(#(?:[a-z0-9-._~!$&'()*+,;=:\/?@]|%[0-9A-F]{2})*)?$/i;
       return url.match(regex);
     }
-      $("button.refreshOne").click(function (event) {
-          var value = event.currentTarget.value;
-          var dataToRemove = {};
-          dataToRemove[value] = true;
-          refreshOne(dataToRemove);
-      });
+    $("button.refreshOne").click(function (event) {
+        var value = event.currentTarget.value;
+        var dataToRemove = {};
+        dataToRemove[value] = true;
+        refreshOne(dataToRemove);
+    });
+    
+    function customStyle(style) {
+        $("body").css({"background":style.backgroundColor || "#c8f28b"});
+    }
+
+    var backgroundColor = JSON.parse(localStorage["custom_style"]);
+    customStyle(backgroundColor);
   });
 })();

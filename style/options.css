@@ -106,8 +106,8 @@ section {
     -webkit-box-shadow: 0 1px 4px 0 rgba(85, 98, 112, .5);
     -moz-box-shadow: 0 1px 4px 0 rgba(85, 98, 112, .5);
     box-shadow: 0 1px 4px 0 rgba(85, 98, 112, .5);
-    padding: 3em;
-    margin: 2em 0
+    padding: 2em;
+    margin: 1.5em 0
 }
 
 h1, h2, h3 {
