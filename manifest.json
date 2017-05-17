@@ -4,7 +4,6 @@
    "permissions": [ "browsingData", "tabs", "cookies", "\u003Call_urls>" ,"contextMenus"],
    "short_name": "__MSG_extensionName__",
    "description": "__MSG_extensionDescription__",
-   "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "0.0.1",
    "default_locale": "en",
    "background": {
