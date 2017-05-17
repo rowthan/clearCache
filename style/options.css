@@ -1,0 +1,372 @@
+a, aside, blockquote, body, div, em, h1, h2, h3, html, label, legend, li, ol, p, section, small, span, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline
+}
+
+html {
+    line-height: 1
+}
+
+ol, ul {
+    list-style: none
+}
+li{
+    line-height: 1.25em;
+}
+blockquote {
+    quotes: none
+}
+
+blockquote:after, blockquote:before {
+    content: "";
+    content: none
+}
+
+aside, section {
+    display: block
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #c8f28b;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 62.5%;
+    color: #333
+}
+
+a {
+    color: #3b5998;
+    text-decoration: none;
+    font-weight: 400
+}
+
+a:visited {
+    color: #f30
+}
+
+small {
+    opacity: .66;
+    font-size: .66em;
+    line-height: 1.66em;
+    vertical-align: top;
+    display: inline-block
+}
+
+#main {
+    width: 60em;
+    margin: 3em auto
+}
+
+#donate-message {
+    display: none
+}
+
+#donate-message-short {
+    display: none;
+    background: #e0edfa
+}
+
+#donate-headline-first-run {
+    display: none
+}
+
+.header-logo {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-indent: -999999px;
+    background: transparent url(../img/logo.png) center center no-repeat
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+    .header-logo {
+        background-image: url(../img/logo.png)
+    }
+}
+
+.header-title {
+    color: #fff;
+    font-size: 40px;
+    margin-top: .25em;
+    margin-bottom: .5em
+}
+
+.center-align {
+    text-align: center
+}
+
+section {
+    background: rgba(255, 255, 255, .9);
+    -webkit-box-shadow: 0 1px 4px 0 rgba(85, 98, 112, .5);
+    -moz-box-shadow: 0 1px 4px 0 rgba(85, 98, 112, .5);
+    box-shadow: 0 1px 4px 0 rgba(85, 98, 112, .5);
+    padding: 3em;
+    margin: 2em 0
+}
+
+h1, h2, h3 {
+    font-weight: 100;
+    line-height: 1em;
+    margin: 0 0 .5em 0;
+    padding: 0
+}
+
+h1 {
+    color: #666;
+    font-size: 40px;
+    text-align: center;
+    text-transform: absolute
+}
+
+h2 {
+    color: #666;
+    font-size: 32px
+}
+
+h3 {
+    font-size: 16px;
+    text-align: center;
+    margin: 1.5em 0;
+    padding: 1em 0;
+    border-bottom: 1px dashed rgba(85, 98, 112, .25)
+}
+
+h2 + p, h2 + ul, h3 {
+    border-top: 1px dashed rgba(85, 98, 112, .25);
+    padding-top: 1em
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.2em;
+    margin: 0 0 -.75em 0
+}
+
+section > p:first-child {
+    margin-top: -.5em
+}
+
+p + p {
+    margin-top: 1.5em
+}
+
+ol, ul {
+    font-size: 16px;
+    margin: 0;
+    padding-left: 1em
+}
+
+.bullet-list {
+    list-style-type: disc;
+    list-style-position: inside
+}
+
+.option-item {
+    display: block;
+    clear: both;
+    font-weight: 400;
+    padding: 0;
+    margin: 0 0 1em 0;
+    list-style: none
+}
+
+.option-item:last-child {
+    margin-bottom: 0
+}
+
+.option-item a, .option-item label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer
+}
+
+.option-item input[type=checkbox], .option-item input[type=radio] {
+    margin-right: 16px
+}
+
+.option-item input[type=checkbox]:checked + label, .option-item input[type=radio]:checked + label {
+    color: #74b714
+}
+
+.option-item .more-options {
+    display: none
+}
+
+.option-item .more-options p {
+    display: block;
+    text-align: center;
+    margin: 1.5em 0;
+    padding: 1em 0;
+    border-top: 1px dashed rgba(85, 98, 112, .25);
+    border-bottom: 1px dashed rgba(85, 98, 112, .25)
+}
+
+.option-item .more-options p input[type=radio] {
+    margin-right: 8px;
+    margin-left: 16px
+}
+
+.option-item .more-options p input[type=radio]:first-of-type {
+    margin-left: 0
+}
+
+.option-item .more-options p input[type=radio] + label {
+    cursor: pointer
+}
+
+.option-item .more-options ol {
+    padding: 0
+}
+
+.option-item .more-options legend {
+    display: none;
+    width: 100%;
+    text-align: center;
+    font-weight: 100;
+    font-size: 16px;
+    font-style: italic
+}
+
+.option-item .more-options ol:empty ~ legend {
+    display: block
+}
+
+.option-item .more-options a.add {
+    display: inline-block;
+    overflow: hidden;
+    background: transparent url(../img/icon_sprite.png) no-repeat 0 -64px;
+    text-indent: -999999px;
+    width: 32px;
+    height: 32px
+}
+
+.option-item .more-options a.add:hover {
+    background-position: -32px -64px
+}
+
+.option-item a.filters {
+    padding-left: .5em
+}
+
+a:hover, label:hover {
+    color: #74b714
+}
+
+.donate-button {
+    display: inline-block;
+    padding: .25em .5em;
+    margin: .25em .25em;
+    color: #fff;
+    background: #4593e3;
+    border-radius: 2px
+}
+
+.donate-button.light {
+    background: #87baed
+}
+
+.donate-button:hover {
+    color: #fff;
+    background: #2f86e0
+}
+
+.more-info {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: .25em;
+    padding-right: .25em;
+    vertical-align: top;
+    overflow: visible;
+    white-space: nowrap
+}
+
+.more-info:before {
+    display: block;
+    width: 2em;
+    height: 2em;
+    position: relative;
+    top: 1px;
+    color: #666;
+    background: #e9e9e9;
+    border-radius: 50%;
+    content: "i";
+    line-height: 2em;
+    font-size: .5em;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer
+}
+
+.more-info blockquote {
+    position: absolute;
+    top: -1.25em;
+    left: 3em;
+    z-index: 999;
+    padding: .5em;
+    width: 350px;
+    white-space: normal;
+    display: none;
+    background: #fff;
+    outline: 1px solid #eee;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(85, 98, 112, .15);
+    -moz-box-shadow: 0 1px 4px 0 rgba(85, 98, 112, .15);
+    box-shadow: 0 1px 4px 0 rgba(85, 98, 112, .15);
+    font-weight: 300;
+    font-size: .75em;
+    line-height: 1.6em
+}
+
+.more-info blockquote:before {
+    position: absolute;
+    left: -12px;
+    top: 1em;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right: 11px solid #eee
+}
+
+.more-info blockquote:after {
+    position: absolute;
+    left: -11px;
+    top: 1em;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right: 11px solid #fff
+}
+
+.more-info:hover blockquote {
+    display: block
+}
+
+em {
+    font-style: italic
+}
+
+.refreshOne {
+    border: 0;
+    border-radius: 5px;
+    float: right;
+    cursor: pointer
+}
+
+hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eeeeee;
+}

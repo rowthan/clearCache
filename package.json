@@ -1,0 +1,20 @@
+{
+  "name": "clear-cache",
+  "version": "0.0.1",
+  "description": "缓存清理机器人",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "缓存",
+    "清理"
+  ],
+  "author": "rowthan",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.3.1",
+    "gulp-uncss": "^1.0.6"
+  }
+}

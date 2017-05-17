@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title data-i18n-content="option_title">clear cache</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="rowthan"/>
+  <link rel="stylesheet" href="style/options.css" type="text/css">
+</head>
+<body>
+
+<div id="main" style="position: relative">
+  <p class="center-align">
+    <span class="header-logo" data-i18n-content="header_log">hello</span>
+  </p>
+  <h1 class="header-title" data-i18n-content="header_title">Clear Cache</h1>
+
+  <section id="donate-message">
+    <h2>
+      <span id="donate-headline-first-run" data-i18n-content="donate_thanks">Thanks for installing Clear Cache &mdash; <br></span>
+      <span id="donate-headline">A Note on Privacy</span>
+    </h2>
+    <p>Hi!</p>
+    <p>Ever since Clear Cache launched, I've been getting requests to sell or monetize it with ads. It has become a
+      <a href="http://arstechnica.com/security/2014/01/malware-vendors-buy-chrome-extensions-to-send-adware-filled-updates/"
+         target="_blank">common scheme by scammers</a>
+      to buy popular Chrome extensions and silently inject malware and hidden links.
+    </p>
+    <p>
+      This extension is a personal project of mine and I built it to be a helpful tool; not a profitable product. It's
+      important to me that Clear Cache
+      <em>remains free</em>, <em>never collects sensitive data
+    </em> and <em>never injects third-party ads or content</em>.
+    </p>
+    <p>
+      If you enjoy Clear Cache and would like to support independent development, please consider a small donation.
+    </p>
+    <p>Thank you for choosing Clear Cache,<br/>&mdash; Ben</p>
+    <p class="center-align">
+      Sponsor
+      <a class="donate-button light" data-ga-event="donation,donate-button-clicked,one-coffee" target="_blank"
+         href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=RTXV4JQ2ZGKGW&amp;lc=US&amp;item_name=Buy%20Benjamin%20Bojko%20a%20coffee%20for%20Clear%20Cache&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted&amp;amount=2">1
+        Coffee</a>
+      <a class="donate-button" data-ga-event="donation,donate-button-clicked,two-coffees" target="_blank"
+         href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=RTXV4JQ2ZGKGW&amp;lc=US&amp;item_name=Buy%20Benjamin%20Bojko%20two%20coffees%20for%20Clear%20Cache&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted&amp;amount=4">2
+        Coffees</a>
+      <a class="donate-button light" data-ga-event="donation,donate-button-clicked,custom" target="_blank"
+         href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=RTXV4JQ2ZGKGW&amp;lc=US&amp;item_name=Buy%20Benjamin%20Bojko%20something%20nice%20for%20Clear%20Cache&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
+         title="Cat poop coffee is expensive...">You Choose</a>
+    </p>
+    <p>
+      <aside class="center-align"><a href="#hide-donation" data-ga-event="donation,hide-message-clicked">hide this
+        message</a></aside>
+    </p>
+  </section>
+
+  <section>
+    <h2 data-i18n-content="autoSetting">auto-Running</h2>
+    <ul>
+      <li>
+        <input type="checkbox" name="autorefresh" id="autorefresh"/>
+        <label for="autorefresh" data-i18n-content="reload_principle">Automatically reload active tab after clearing data</label>
+      </li>
+    </ul>
+    <h3 style="text-align: start" data-i18n-content="auto_clean">auto-Clean</h3>
+    <ul>
+      <li class="option-item">
+        <input type="checkbox" name="time-to-clear" value="onCloseWindow" id="onclosewindow"/>
+        <label for="onclosewindow">关闭窗口时</label>
+      </li>
+      <li class="option-item">
+        <input type="checkbox" name="time-to-clear" value="onCloseWindow" id="onopenwindow"/>
+        <label for="onopenwindow">打开窗口时</label>
+      </li>
+      <li class="option-item">
+        <input type="checkbox" name="time-to-clear" value="onCloseWindow" id="onclosetab"/>
+        <label for="onclosetab">关闭标签页时</label>
+      </li>
+      <li class="option-item">
+        <input type="checkbox" name="time-to-clear" value="onCloseWindow" id="onopentab"/>
+        <label for="onopentab">打开标签页时</label>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 data-i18n-content="shortcut_contextMenu">Keyboard Shortcut and contextMenu</h2>
+    <p>
+      <span data-i18n-content="">
+         添加到右击菜单中去
+        <input type="radio" name="contextMenuSwitch" value="true" id="contextMenuON"/>
+        <label for="contextMenuON">添加</label>
+        <input type="radio" name="contextMenuSwitch" value="false" id="contextMenuOFF"/>
+        <label for="contextMenuOFF">不添加</label>
+      </span>
+    </p>
+    <p>
+      <span data-i18n-content="shortcut_to">
+         Shortcuts can be configured at the bottom of the
+      </span>
+      <a class="extensions-link" href="chrome://extensions/configureCommands" target="_blank">
+        <span data-i18n-content="shortcut_chrome_page">
+          Chrome Extensions page
+        </span>
+      </a>
+      <span data-i18n-content="shortcut_by_selecting">
+        by selecting
+      </span>
+      <em data-i18n-content="shortcut_default">Keyboard shortcuts</em>.
+    </p>
+  </section>
+
+  <section id="timePerid">
+    <h2 style="display: inline-block;margin-right: 20px;" data-i18n-content="time_period">Time Period</h2><span class="tip">将清理以下时间范围内的缓存</span>
+    <ul>
+      <!-- Extension now API expects miliseconds as values -->
+      <li class="option-item"><input type="radio" name="timeperiod" value="last_hour" id="last_hour"/><label
+          for="last_hour" data-i18n-content="last_hour">Last Hour</label></li>
+      <li class="option-item"><input type="radio" name="timeperiod" value="last_day" id="last_day"/><label
+          for="last_day" data-i18n-content="last_day">Last Day</label></li>
+      <li class="option-item"><input type="radio" name="timeperiod" value="last_week" id="last_week"/><label
+          for="last_week" data-i18n-content="last_week">Last Week</label></li>
+      <li class="option-item"><input type="radio" name="timeperiod" value="last_month" id="last_month"/><label
+          for="last_month" data-i18n-content="last_month">Last Month</label></li>
+      <li class="option-item"><input type="radio" name="timeperiod" value="anyTime" id="anyTime"/><label
+          for="anyTime" data-i18n-content="anyTime">anyTime</label></li>
+    </ul>
+  </section>
+
+  <section id="data-to-remove">
+    <h2 data-i18n-content="dataToRemove">Data to Remove</h2>
+    <h3><a class="toggle-setting" href="#common-cache" data-for="common-use-cache">常用缓存设置</a></h3>
+    <ul id="common-cache">
+      <li class="option-item">
+        <input type="checkbox" name="data_to_remove" value="cache" id="cache"/><label for="cache" data-i18n-content="cache">Cache</label>
+        <aside class="more-info">
+          <blockquote cite="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1">
+            <span data-i18n-content="cache_info">
+               Text of webpages you've visited in Google Chrome is removed from your computer. Browsers store elements of
+               webpages to speed up the loading of the webpage during your next visit.
+            </span>
+            &mdash;
+            <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1" target="_blank">
+              Source
+            </a>
+          </blockquote>
+        </aside>
+        <button class="refreshOne" value="cache">清理</button>
+      </li>
+      <li class="option-item">
+        <input type="checkbox" name="data_to_remove" value="cookies" id="cookies"/><label for="cookies">Cookies</label>
+        <small><a class="filters" href="#cookie-filters" data-i18n-content="options">(options)</a></small>
+        <button class="refreshOne" value="cookies">清理</button>
+        <aside id="cookie-filters" class="more-options">
+          <p><input type="radio" name="cookies_filter_inclusive" value="yes" id="cookies_filter_inclusive_yes"/>
+            <label for="cookies_filter_inclusive_yes" data-i18n-content="only_clear_follow">Only clear the following </label><em data-i18n-content="fast">fast</em>
+            <input type="radio" name="cookies_filter_inclusive" value="no" id="cookies_filter_inclusive_no"/>
+            <label for="cookies_filter_inclusive_no" data-i18n-content="donot_clear_follow">Don't clear the following </label><em data-i18n-content="slow">slow</em>
+          </p>
+          <ol></ol>
+          <legend data-i18n-content="no_filters_defined">No filters defined</legend>
+          <p><a href="#" class="add" data-i18n-content="add_domain">Add Domain</a></p>
+        </aside>
+        <aside class="more-info">
+          <blockquote cite="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1">
+            <span data-i18n-content="cookie_info">
+              Files stored on your computer by websites you've visited. These files contain user information, such as
+              preferences for websites or profile information.
+            </span>
+             &mdash;
+            <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1"
+              target="_blank">Source</a>
+          </blockquote>
+        </aside>
+      </li>
+      <li class="option-item">
+        <input type="checkbox" name="data_to_remove" value="history" id="history"/>
+        <label for="history" data-i18n-content="history">History</label>
+        <aside class="more-info">
+          <blockquote cite="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1">
+            <span data-i18n-content="history_info">
+              Clearing your browsing history specifically deletes the following: Web addresses you've visited from the
+              History page, Cached text of those pages, Snapshots of those pages for images that appear on the New Tab
+              page, Any IP addresses pre-fetched from those pages.
+            </span>
+            &mdash;
+            <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1" target="_blank">
+              Source
+            </a>
+          </blockquote>
+        </aside>
+        <button class="refreshOne" value="history">清理</button>
+      </li>
+      <li class="option-item">
+        <input type="checkbox" name="data_to_remove" value="downloads" id="downloads"/><label
+          for="downloads" data-i18n-content="downloads">Downloads</label>
+        <aside class="more-info">
+          <blockquote cite="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1">
+            <span data-i18n-content="downloads_info">
+               The list of files you've downloaded using Google Chrome is cleared, but the actual files are not removed from
+              your computer.
+            </span>
+            &mdash;
+            <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1"
+                target="_blank">Source</a>
+          </blockquote>
+        </aside>
+        <button class="refreshOne" value="downloads">清理</button>
+      </li>
+      <li class="option-item">
+        <input type="checkbox" name="data_to_remove" value="formData" id="formData"/>
+        <label for="formData" data-i18n-content="formData">Form Data</label>
+        <aside class="more-info">
+          <blockquote cite="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1">
+            <span data-i18n-content="formData_info">
+               All your Autofill entries and records of text you've entered on web forms are deleted.
+            </span>
+            &mdash;
+            <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1" target="_blank">
+              Source
+            </a>
+          </blockquote>
+        </aside>
+        <button class="refreshOne" value="formData">清理</button>
+      </li>
+      <li class="option-item">
+        <input type="checkbox" name="data_to_remove" value="passwords" id="passwords"/><label
+          for="passwords" data-i18n-content="passwords">Passwords</label>
+        <aside class="more-info">
+          <blockquote cite="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1">
+            <span data-i18n-content="passwords_info">
+              Records of usernames and passwords are deleted. If you're using a Mac, your password records are deleted
+              from Keychain Access.
+            </span>
+            &mdash;
+            <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1" target="_blank">
+              Source
+            </a>
+          </blockquote>
+        </aside>
+        <button class="refreshOne" value="passwords">清理</button>
+      </li>
+    </ul>
+    <h3><a class="toggle-setting" href="#other-cache" data-for="other-cache">其他缓存设置</a></h3>
+    <ul id="other-cache" style="display: none">
+      <li class="option-item">
+        <input type="checkbox" name="data_to_remove" value="indexedDB" id="indexedDB"/>
+        <label for="indexedDB">Indexed DB</label>
+        <aside class="more-info">
+          <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">
+            <span data-i18n-content="indexDB_info">
+              IndexedDB is an API for client-side storage of significant amounts of structured data, which also enables high performance searches
+              of this data using indexes.
+            </span>
+             &mdash;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API" target="_blank">
+              Source
+            </a>
+          </blockquote>
+        </aside>
+        <button class="refreshOne" value="indexedDB">清理</button>
+      </li>
+      <li class="option-item">
+        <input type="checkbox" name="data_to_remove" value="localStorage" id="localStorage"/>
+        <label for="localStorage">Local Storage</label>
+        <aside class="more-info">
+          <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage">
+            <span data-i18n-content="localStorage_info">
+              DOM Storage [which includes Local Storage] is designed to provide a larger, more secure, and easier-to-use alternative to
+              storing information in cookies.
+            </span>
+             &mdash;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage" target="_blank">
+              Source
+            </a>
+          </blockquote>
+        </aside>
+        <button class="refreshOne" value="localStorage">清理</button>
+      </li>
+      <li class="option-item">
+        <input type="checkbox" name="data_to_remove" value="fileSystems" id="fileSystems"/>
+        <label for="fileSystems" data-i18n-content="fileSystems">File Systems</label>
+        <aside class="more-info">
+          <blockquote cite="https://developer.chrome.com/apps/fileSystem">
+            <span data-i18n-content="fileSystems_info">
+              [Chrome Apps may use] the chrome.fileSystem
+              API to create, read, navigate, and write to the user's local file system. With this API, Chrome Apps can
+              read and write to a user-selected location. For example, a text editor app can use the API to read and write
+              local documents. [...]
+            </span>
+            &mdash;
+            <a href="https://developer.chrome.com/apps/fileSystem" target="_blank">
+              Source
+            </a>
+          </blockquote>
+        </aside>
+        <button class="refreshOne" value="fileSystems">清理</button>
+      </li>
+      <li class="option-item">
+        <input type="checkbox" name="data_to_remove" value="appcache" id="appcache"/>
+        <label for="appcache" data-i18n-content="appCache">App Cache</label>
+        <aside class="more-info">
+          <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache">
+            <span  data-i18n-content="appCache_info">
+              HTML5 provides an application caching mechanism that lets web-based applications run offline. Developers can
+            use the Application Cache (AppCache) interface to specify resources that the browser should cache and make
+            available to offline users. Applications that are cached load and work correctly even if users click the
+            refresh button when they are offline.
+            </span>
+            &mdash;
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache" target="_blank">
+              Source
+            </a>
+          </blockquote>
+        </aside>
+        <button class="refreshOne" value="appcache">清理</button>
+      </li>
+      <li class="option-item">
+        <input type="checkbox" name="data_to_remove" value="pluginData" id="pluginData"/>
+        <label for="pluginData">Plugin Data</label>
+        <aside class="more-info">
+          <blockquote cite="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1">
+            <span data-i18n-content="pluginData_info">
+               Any client-side data stored by plug-ins that use the NPAPI ClearSiteData API.
+            </span>
+            &mdash;
+            <a href="https://support.google.com/chrome/answer/95582?p=settings_clear_browsing_data&amp;rd=1" target="_blank">
+            Source
+          </a>
+          </blockquote>
+        </aside>
+        <button class="refreshOne" value="pluginData">清理</button>
+      </li>
+      <li class="option-item">
+        <input type="checkbox" name="data_to_remove" value="webSQL" id="webSQL"/><label for="webSQL">WebSQL</label>
+        <aside class="more-info">
+          <blockquote cite="http://en.wikipedia.org/wiki/Web_SQL_Database">
+            <span data-i18n-content="webSQL_info">
+              Web SQL Database is a web page API for
+              storing data in databases that can be queried using a variant of SQL. [...] The W3C Web Applications Working
+              Group ceased working on the specification in November 2010, citing a lack of independent implementations
+              (i.e., the use of a database system other than SQLite as the backend) as the reason the specification could
+              not move forward to become a W3C Recommendation. One potential alternative storage standard is
+              IndexedDB.
+            </span>
+             &mdash;
+            <a href="http://en.wikipedia.org/wiki/Web_SQL_Database" target="_blank">
+              Source
+            </a>
+          </blockquote>
+        </aside>
+        <button class="refreshOne" value="webSQL">清理</button>
+      </li>
+    </ul>
+  </section>
+
+  <section id="donate-message-short">
+    <p class="center-align">
+      Support Clear Cache by sponsoring
+      <a data-ga-event="donation,short-donate-button-clicked,one-coffee" target="_blank"
+         href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=RTXV4JQ2ZGKGW&amp;lc=US&amp;item_name=Buy%20Benjamin%20Bojko%20a%20coffee%20for%20Clear%20Cache&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted&amp;amount=2">
+        1 coffee
+      </a>,
+      <a data-ga-event="donation,short-donate-button-clicked,two-coffees" target="_blank"
+                       href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=RTXV4JQ2ZGKGW&amp;lc=US&amp;item_name=Buy%20Benjamin%20Bojko%20a%20coffee%20for%20Clear%20Cache&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted&amp;amount=4">
+        2 coffees
+      </a>
+        or
+      <a data-ga-event="donation,short-donate-button-clicked,custom" target="_blank"
+                          href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=RTXV4JQ2ZGKGW&amp;lc=US&amp;item_name=Buy%20Benjamin%20Bojko%20a%20coffee&amp;%20for%20Clear%20Cachecurrency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted">
+        something else
+      </a>.
+    </p>
+  </section>
+
+  <section>
+    <h2 data-i18n-content="question_support">Questions and Support</h2>
+    <p>
+      <span data-i18n-content="question_trouble">
+        Having trouble using Clear Cache? Want to ask a question or request a feature? Send me a note in the
+      </span>
+      <a href="https://github.com/rowthan/clearCache"
+        target="_blank">
+      <span data-i18n-content="support_section">
+        support section
+      </span>
+      </a>.
+    </p>
+  </section>
+
+  <section id="version">
+    <h2 data-i18n-content="changelog">更新日志</h2>
+    
+    <h4 >Version 0.0.1 2017/05/12</h4>
+    <ul class="bullet-list">
+      <li>支持刷新各类缓存</li>
+      <li>快捷键设置</li>
+      <li>添加到右击菜单栏</li>
+      <li>记录刷新次数</li>
+      <li>单独删除某一类缓存</li>
+    </ul>
+    <hr>
+  </section>
+
+  <section>
+    <p>
+      <span data-i18n-content="extension_by">
+        开发者
+      </span>
+      <a href="http://github.com/rowthan" target="_blank">rowthan</a>
+    </p>
+  </section>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/load-default-options.js"></script>
+<script type="text/javascript" src="js/options.js"></script>
+<script src="js/contextMenu.js"></script>
+<script type="text/javascript" src="js/language.js"></script>
+<script src="js/clearCache.js"></script>
+</body>
+</html>
